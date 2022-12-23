@@ -1,7 +1,17 @@
-.guide__sidebar {
+.sidebar {
     background-color: red;
+    width: 20vw;
+    position: fixed;
+}
+
+.guide {
+    background-color: green;
+    display: grid;
+    grid-template-columns: 20vw auto;
 }
 
 .guide__main {
-    background-color: green;
+    grid-column-start: 2;
+    background: yellow;
 }
+
