@@ -2,6 +2,7 @@ body {
     margin: 0;
 }
 
+/* GUIDE */
 .guide__sidebar {
     background-color: red;
     width: 20vw;
@@ -9,13 +10,29 @@ body {
 }
 
 .guide {
-    background-color: green;
     display: grid;
     grid-template-columns: 20vw auto;
 }
 
-.guide__main {
+.guide__body {
     grid-column-start: 2;
-    background: yellow;
 }
 
+/* NOTE  */
+
+.note__sidebar {
+    background-color: green;
+    position: fixed;
+    right: 0;
+    width: 20vw;
+}
+
+.note {
+    display: grid;
+    grid-template-columns: auto 20vw;
+}
+
+#main {
+    grid-column-start: 1;
+    background-color: grey;
+}
