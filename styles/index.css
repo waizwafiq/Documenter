@@ -1,4 +1,8 @@
-.sidebar {
+body {
+    margin: 0;
+}
+
+.guide__sidebar {
     background-color: red;
     width: 20vw;
     position: fixed;
