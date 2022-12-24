@@ -6,7 +6,9 @@ body {
 .guide__sidebar {
     background-color: red;
     width: 20vw;
+    height: 100%;
     position: fixed;
+    overflow-y: scroll;
 }
 
 .guide {
