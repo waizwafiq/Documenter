@@ -2,25 +2,44 @@ body {
     margin: 0;
 }
 
-/* GUIDE */
-.guide__sidebar {
-    background-color: red;
-    width: 20vw;
-    height: 100%;
-    position: fixed;
-    overflow-y: scroll;
-}
-
 .guide {
     display: grid;
     grid-template-columns: 20vw auto;
 }
 
+/* GUIDE SIDEBAR */
+.guide__sidebar {
+    background-color: red;
+    width: 20vw;
+    position: fixed;
+
+    display: grid;
+    grid-template-rows: 10vw 5vw 85vw;
+}
+
+.guide__header {
+    background-color: green;
+    grid-row-start: 1;
+}
+
+.guide__search {
+    background-color: rgb(25, 200, 200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide__flow {
+    background-color: bisque;
+    overflow-y: scroll;
+}
+
+/* GUIDE BODY */
 .guide__body {
     grid-column-start: 2;
 }
 
-/* NOTE  */
+/* NOTE */
 
 .note__sidebar {
     background-color: green;
