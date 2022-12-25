@@ -9,12 +9,14 @@ body {
 
 /* GUIDE SIDEBAR */
 .guide__sidebar {
-    background-color: red;
     width: 20vw;
+    height: 100%;
     position: fixed;
 
+    border-right: 1px beige solid;
+
     display: grid;
-    grid-template-rows: 10vw 5vw 85vw;
+    grid-template-rows: 10vw 5vw 36vw;
 }
 
 .guide__header {
@@ -31,7 +33,13 @@ body {
 
 .guide__flow {
     background-color: bisque;
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+.rectangle {
+    background-color: blue;
+    margin-bottom: 5px;
+    height: 150px;
 }
 
 /* GUIDE BODY */
@@ -39,13 +47,27 @@ body {
     grid-column-start: 2;
 }
 
-/* NOTE */
+.guide__top {
+    height: 100px;
+}
 
+/* NOTE */
 .note__sidebar {
     background-color: green;
     position: fixed;
     right: 0;
     width: 20vw;
+}
+
+@media only screen and (max-width: 1024px) {
+    .note__sidebar {
+        display: none;
+    }
+
+    div.note {
+        grid-template-columns: auto;
+    }
+
 }
 
 .note {
@@ -55,5 +77,18 @@ body {
 
 #main {
     grid-column-start: 1;
-    background-color: grey;
+}
+
+.note__header {
+    background-color: red;
+}
+
+.note__content {
+    background-color: gray;
+}
+
+.note__body {
+    width: 85%;
+    margin: auto;
+    background-color: darkmagenta;
 }
