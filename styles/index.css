@@ -36,6 +36,11 @@ body {
     overflow-y: auto;
 }
 
+::-webkit-scrollbar {
+    /* HIDE SCROLLBAR */
+    display: none;
+}
+
 .rectangle {
     background-color: blue;
     margin-bottom: 5px;
@@ -54,9 +59,14 @@ body {
 /* NOTE */
 .note__sidebar {
     background-color: green;
-    position: fixed;
+    position: absolute;
     right: 0;
     width: 20vw;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
 }
 
 @media only screen and (max-width: 1024px) {
