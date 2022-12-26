@@ -78,9 +78,10 @@ body {
 
 .guide__top {
     height: 100px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
-
-.breadcrumbs {}
 
 /* NOTE */
 .note__sidebar {
