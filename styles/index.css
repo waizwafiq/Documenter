@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
@@ -36,7 +40,27 @@ body {
     overflow-y: auto;
 }
 
+/* HANDLING SCROLLBARS */
+
 ::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(54, 52, 52);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(69, 96, 88, 1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(69, 96, 88, 0.85);
+    ;
+}
+
+.guide__flow::-webkit-scrollbar {
     /* HIDE SCROLLBAR */
     display: none;
 }
@@ -55,6 +79,8 @@ body {
 .guide__top {
     height: 100px;
 }
+
+.breadcrumbs {}
 
 /* NOTE */
 .note__sidebar {
