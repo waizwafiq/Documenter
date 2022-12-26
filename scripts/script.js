@@ -1,14 +1,13 @@
 // MAKE RIGHT SIDEBAR STICKS AFTER SCROLLING
 window.onscroll = function () { stickSidebar() };
 
-let navbar = document.querySelector(".note__sidebar");
-console.log("Element: " + navbar)
-let sticky = navbar.offsetTop;
+let sidebar = document.querySelector(".note__sidebar");
+let sticky = sidebar.offsetTop;
 
 function stickSidebar() {
     if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
+        sidebar.classList.add("sticky")
     } else {
-        navbar.classList.remove("sticky");
+        sidebar.classList.remove("sticky");
     }
 }
