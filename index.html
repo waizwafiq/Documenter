@@ -7,12 +7,20 @@
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Documenter</title>
     </head>
     <body>
         <div class="guide__sidebar">
             <!-- Sidebar for subtopics -->
             <div class="guide__header"></div>
+            <div class="mobile-guide__header">
+                <a href="javascript:void(0)" class="mobile-toggle"
+                    onclick="closeTab()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
             <div class="guide__search">
                 <input type="search" placeholder="Search">
             </div>

@@ -4,6 +4,7 @@ html {
 
 body {
     margin: 0;
+    overflow: overlay;
 }
 
 .guide {
@@ -28,6 +29,10 @@ body {
     grid-row-start: 1;
 }
 
+.mobile-guide__header {
+    display: none;
+}
+
 .guide__search {
     background-color: rgb(25, 200, 200);
     display: flex;
@@ -43,11 +48,12 @@ body {
 /* HANDLING SCROLLBARS */
 
 ::-webkit-scrollbar {
+    position: absolutehow to;
     width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgb(54, 52, 52);
+    /* box-shadow: inset 0 0 5px rgb(54, 52, 52); */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -97,6 +103,8 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
+
+    /* SMALL LAPTOPS */
     .note__sidebar {
         display: none;
     }
@@ -104,6 +112,37 @@ body {
     div.note {
         grid-template-columns: auto;
     }
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* TABLETS */
+    .guide__sidebar {
+        display: none;
+        width: 80%;
+        position: absolute;
+    }
+
+    div.guide {
+        grid-template-columns: auto;
+    }
+
+    .guide__header {
+        display: none;
+    }
+
+    .mobile-guide__header {
+        background-color: red;
+        display: block;
+        grid-row-start: 1;
+    }
+
+    .mobile-toggle {
+        right: 1rem;
+        top: 1rem;
+        font-size: 100%;
+    }
+
 
 }
 
