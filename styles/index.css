@@ -14,11 +14,11 @@ body {
 .guide {
     display: grid;
     grid-template-columns: 20vw auto;
+    grid-template-rows: auto 20vh;
 }
 
 /* GUIDE SIDEBAR */
 .guide__sidebar {
-    background-color: #232323;
     width: 20vw;
     height: 100%;
     position: fixed;
@@ -43,6 +43,25 @@ div.guide__header {
     align-items: center;
 }
 
+.guide__search input[type=search] {
+    background-color: transparent;
+    border: 1px solid #A0A0A0;
+    border-radius: 2px;
+    width: 80%;
+    height: 50%;
+    padding-left: 5%;
+
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    color: white;
+}
+
+.guide__search input[type=search]::-webkit-search-cancel-button {
+    
+}
+
 .guide__flow {
     overflow-y: auto;
 }
@@ -53,18 +72,22 @@ div.guide__header {
     justify-content: left;
     align-items: center;
     padding-left: 5%;
-    height: 5rem;
+    height: 4.75rem;
 }
 
 .rectangle-topic h3 {
     font-family: 'Courier New', Courier, monospace;
     padding-left: 5%;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
-.rectangle-topic:hover {
-    background-color: blue;
+.rectangle-topic.active {
+    background-color: #0C4B86;
+}
+
+.rectangle-topic:not(.active):hover {
+    background-color: #2d2d2d;
 }
 
 /* GUIDE BODY */
@@ -75,7 +98,7 @@ div.guide__header {
 .guide__top {
     height: 100px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 }
 
@@ -103,11 +126,11 @@ div.guide__header {
 /* NOTE CONTENTS */
 
 .chapter-index {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-size: small;
 }
 
-.note__content p {
+.note__content {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 }
@@ -117,13 +140,20 @@ div.guide__header {
     margin: auto;
 }
 
+/* FOOTER */
+.footer {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+
 /* RESPONSIVE DESIGN */
 
 .mobile-guide__header {
     display: none;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1496px) {
 
     /* SMALL LAPTOPS */
     .note__sidebar {
@@ -188,4 +218,16 @@ div.guide__header {
 .guide__flow::-webkit-scrollbar {
     /* HIDE SCROLLBAR */
     /* display: none; */
+}
+
+/* EXTRA CONFIGS */
+.prevent-select {
+    /* PREVENT TEXT SELECTION */
+
+    /* Safari */
+    -webkit-user-select: none;
+    /* IE 10 and IE 11 */
+    -ms-user-select: none;
+    /* Standard syntax */
+    user-select: none;
 }
