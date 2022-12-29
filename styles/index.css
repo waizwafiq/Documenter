@@ -5,7 +5,11 @@ html {
 body {
     margin: 0;
     overflow: overlay;
+    background-color: #232323;
+    color: white;
 }
+
+/* GUIDE */
 
 .guide {
     display: grid;
@@ -14,67 +18,53 @@ body {
 
 /* GUIDE SIDEBAR */
 .guide__sidebar {
+    background-color: #232323;
     width: 20vw;
     height: 100%;
     position: fixed;
 
-    border-right: 1px beige solid;
+    border-right: 1px #808080 solid;
 
     display: grid;
-    grid-template-rows: 10vw 5vw;
+    grid-template-rows: min-content 5vw;
 }
 
-.guide__header {
-    background-color: green;
+div.guide__header {
     grid-row-start: 1;
 }
 
-.mobile-guide__header {
-    display: none;
+.guide__header img {
+    width: 20vw;
 }
 
 .guide__search {
-    background-color: rgb(25, 200, 200);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .guide__flow {
-    background-color: bisque;
     overflow-y: auto;
 }
 
-/* HANDLING SCROLLBARS */
-
-::-webkit-scrollbar {
-    position: absolutehow to;
-    width: 5px;
+.rectangle-topic {
+    /* margin-bottom: 5px; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 5%;
+    height: 5rem;
 }
 
-::-webkit-scrollbar-track {
-    /* box-shadow: inset 0 0 5px rgb(54, 52, 52); */
+.rectangle-topic h3 {
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 5%;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
-::-webkit-scrollbar-thumb {
-    background: rgba(69, 96, 88, 1);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(69, 96, 88, 0.85);
-    ;
-}
-
-.guide__flow::-webkit-scrollbar {
-    /* HIDE SCROLLBAR */
-    display: none;
-}
-
-.rectangle {
+.rectangle-topic:hover {
     background-color: blue;
-    margin-bottom: 5px;
-    height: 150px;
 }
 
 /* GUIDE BODY */
@@ -91,7 +81,6 @@ body {
 
 /* NOTE */
 .note__sidebar {
-    background-color: green;
     position: absolute;
     right: 0;
     width: 20vw;
@@ -100,6 +89,38 @@ body {
 .sticky {
     position: fixed;
     top: 0;
+}
+
+.note {
+    display: grid;
+    grid-template-columns: auto 20vw;
+}
+
+#main {
+    grid-column-start: 1;
+}
+
+/* NOTE CONTENTS */
+
+.chapter-index {
+    font-family:'Courier New', Courier, monospace;
+    font-size: small;
+}
+
+.note__content p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.note__body {
+    width: 85%;
+    margin: auto;
+}
+
+/* RESPONSIVE DESIGN */
+
+.mobile-guide__header {
+    display: none;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -114,7 +135,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 890px) {
 
     /* TABLETS */
     .guide__sidebar {
@@ -142,29 +163,29 @@ body {
         top: 1rem;
         font-size: 100%;
     }
-
-
 }
 
-.note {
-    display: grid;
-    grid-template-columns: auto 20vw;
+/* HANDLING SCROLLBARS */
+
+::-webkit-scrollbar {
+    width: 5px;
 }
 
-#main {
-    grid-column-start: 1;
+::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px rgb(54, 52, 52); */
 }
 
-.note__header {
-    background-color: red;
+::-webkit-scrollbar-thumb {
+    background: rgba(34, 66, 194, 0.6);
+    border-radius: 10px;
 }
 
-.note__content {
-    background-color: gray;
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(34, 66, 194, 1);
+    ;
 }
 
-.note__body {
-    width: 85%;
-    margin: auto;
-    background-color: darkmagenta;
+.guide__flow::-webkit-scrollbar {
+    /* HIDE SCROLLBAR */
+    /* display: none; */
 }
