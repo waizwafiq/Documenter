@@ -21,7 +21,7 @@ body {
     border-right: 1px beige solid;
 
     display: grid;
-    grid-template-rows: 10vw 5vw 36vw;
+    grid-template-rows: 10vw 5vw;
 }
 
 .guide__header {
