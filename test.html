@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="styles/prism.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    .copy-button {
+      display: inline-block;
+      font-size: 14px;
+      background: #ccc;
+      color: #fff;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .copy-button:before {
+      content: '\f0c5'; /* Use the copy icon from Font Awesome */
+      font-family: 'Font Awesome 5 Free';
+      margin-right: 5px;
+    }
+    .copy-button:hover {
+      background: #333;
+    }
+  </style>
+  
+  <button class="copy-button" onclick="copyCode()">Copy</button>
+
+  <script>
+    function copyCode() {
+      // Get the code element
+      var codeElement = document.querySelector('.codeblock pre');
+    
+      // Select the text
+      var selection = window.getSelection();
+      var range = document.createRange();
+      range.selectNodeContents(codeElement);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    
+      // Copy the text
+      document.execCommand('copy');
+    
+      // Deselect the text
+      selection.removeAllRanges();
+    }
+  </script>
+</body>
+</html>
