@@ -179,6 +179,10 @@ div.guide__header {
     transition: visibility 0s linear 0s, opacity 0.4s ease-in-out;
 }
 
+.codeblock button:hover {
+    background-color: #aaa;
+    color: #ddd
+}
 
 /* FOOTER */
 .footer {
