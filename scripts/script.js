@@ -11,3 +11,27 @@ function stickSidebar() {
         sidebar.classList.remove("sticky");
     }
 }
+
+function copyCode(button) {
+    // Get the code element
+    var codeblock = button.closest('.codeblock button').nextElementSibling;
+
+    // Select the text
+    let selection = window.getSelection();
+    let range = document.createRange();
+    range.selectNodeContents(codeblock);
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    // Copy the text
+    document.execCommand('copy');
+
+    // Deselect the text
+    selection.removeAllRanges();
+    
+    button.textContent = 'Copied!'
+
+    setTimeout(function() {
+        button.textContent = 'Copy';
+      }, 3000);
+}

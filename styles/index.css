@@ -76,10 +76,10 @@ div.guide__header {
 }
 
 .rectangle-topic h3 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif; /*'Courier New', Courier, monospace;*/
     padding-left: 5%;
-    font-weight: 600;
-    font-size: 1.25rem;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .rectangle-topic.active {
@@ -135,15 +135,62 @@ div.guide__header {
     line-height: 1.5;
 }
 
+.media__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media__content img {
+    /* to avoid image with large dimensions overflowing */
+    width: 75%;
+}
+
 .note__body {
     width: 85%;
     margin: auto;
 }
 
+.note__body pre {
+    border: #A6A3A3 solid 1px;
+}
+
+.codeblock {
+    position: relative;
+}
+
+.codeblock button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: 0;
+    opacity: 0;
+    background: #ccc;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    visibility: hidden;
+    transition: visibility 0s linear 0.4s, opacity 0.4s ease-in-out;
+}
+
+.codeblock:hover button {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.4s ease-in-out;
+}
+
+
 /* FOOTER */
 .footer {
     grid-column-start: 2;
     grid-row-start: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+
+    color: black;
+    background-color: #A3A3A3;
 }
 
 
@@ -165,7 +212,7 @@ div.guide__header {
     }
 }
 
-@media only screen and (max-width: 890px) {
+@media only screen and (max-width: 990px) {
 
     /* TABLETS */
     .guide__sidebar {
@@ -206,12 +253,12 @@ div.guide__header {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(34, 66, 194, 0.6);
+    background: rgba(78, 78, 80, 0.6);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(34, 66, 194, 1);
+    background: rgba(78, 78, 80, 1);
     ;
 }
 
@@ -222,7 +269,7 @@ div.guide__header {
 
 /* EXTRA CONFIGS */
 .prevent-select {
-    /* PREVENT TEXT SELECTION */
+    /* PREVENT TEXT SELECTION (highlight) */
 
     /* Safari */
     -webkit-user-select: none;

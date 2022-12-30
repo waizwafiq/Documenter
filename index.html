@@ -5,10 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/index.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/prism.css">
         <title>Documenter</title>
     </head>
     <body>
@@ -64,6 +61,9 @@
                     <li>
                         <a href="#hello-section">hello-section</a>
                     </li>
+                    <li>
+                        <a href="#bye-section">bye-section</a>
+                    </li>
                 </nav>
                 <div class="note">
                     <main id="main">
@@ -81,11 +81,16 @@
                                     est lorem ipsum dolor sit amet consectetur
                                     adipiscing. Lacus suspendisse faucibus
                                     interdum
-                                    <pre>
-                                        <code>img:not([alt]) {
-    outline: 10px red;
-}                                        </code>
-                                    </pre>
+                                </p>
+
+                                <div class="codeblock">
+                                    <button onclick="copyCode(this)">Copy</button>
+                                    <pre><code class="language-css">img {
+    background: url('hello.png');
+}
+</code></pre>
+                                </div>
+                                <p>
                                     Sit amet nulla facilisi morbi
                                     tempu gravida arcu. Turpis cursus in hac
                                     habitasse platea
@@ -96,359 +101,6 @@
                                     odio facilisis. Viverra aliquet eget sit
                                     amet
                                     tellus.
-
-                                    Erat imperdiet sed euismod nisi porta. Et
-                                    malesuada fames ac turpis egestas integer
-                                    eget.
-                                    Blandit cursus risus at ultrices mi. Urna
-                                    porttitor rhoncus dolor purus. Duis
-                                    ultricies
-                                    lacus sed turpis. Massa tempor nec feugiat
-                                    nisl
-                                    pretium fusce id velit. Quam adipiscing
-                                    vitae
-                                    proin sagittis. Sed vulputate mi sit amet
-                                    mauris
-                                    commodo. Maecenas pharetra convallis posuere
-                                    morbi. Diam maecenas sed enim ut.
-                                    Condimentum lacinia quis vel eros donec.
-                                    Tortor
-                                    id aliquet lectus proin nibh. Sem nulla
-                                    pharetra
-                                    diam sit amet nisl suscipit. Egestas sed
-                                    tempus
-                                    urna et pharetra. Ipsum faucibus vitae
-                                    aliquet
-                                    nec ullamcorper sit amet. Feugiat vivamus at
-                                    augue eget arcu dictum varius. Varius morbi
-                                    enim
-                                    nunc faucibus a pellentesque sit. Tristique
-                                    risus nec feugiat in fermentum posuere urna
-                                    nec
-                                    tincidunt. Vestibulum morbi blandit cursus
-                                    risus
-                                    at. Convallis tellus id interdum velit
-                                    laoreet.
-                                    Vitae justo eget magna fermentum iaculis eu
-                                    non.
-                                    Integer eget aliquet nibh praesent tristique
-                                    magna sit. Potenti nullam ac tortor vitae
-                                    purus
-                                    faucibus. Pellentesque eu tincidunt tortor
-                                    aliquam nulla facilisi cras fermentum odio.
-                                    Nulla facilisi morbi tempus iaculis urna.
-                                    Lobortis scelerisque fermentum dui faucibus
-                                    in
-                                    ornare quam. Nunc lobortis mattis aliquam
-                                    faucibus purus in. Mauris rhoncus aenean vel
-                                    elit scelerisque. Suspendisse ultrices
-                                    gravida
-                                    dictum fusce ut.
-
-                                    Nec nam aliquam sem et tortor consequat.
-                                    Amet
-                                    mattis vulputate enim nulla aliquet
-                                    porttitor
-                                    lacus. Mi tempus imperdiet nulla malesuada
-                                    pellentesque elit. A condimentum vitae
-                                    sapien
-                                    pellentesque habitant morbi tristique.
-                                    Ornare
-                                    lectus sit amet est placerat in. Proin
-                                    libero
-                                    nunc consequat interdum varius sit amet
-                                    mattis
-                                    vulputate. Sit amet nisl suscipit
-                                    adipiscing.
-                                    Vitae justo eget magna fermentum iaculis eu
-                                    non
-                                    diam. Proin sagittis nisl rhoncus mattis
-                                    rhoncus. Sapien pellentesque habitant morbi
-                                    tristique. Adipiscing diam donec adipiscing
-                                    tristique risus. Phasellus faucibus
-                                    scelerisque
-                                    eleifend donec pretium vulputate. Etiam erat
-                                    velit scelerisque in dictum non.
-
-                                    Orci sagittis eu volutpat odio facilisis
-                                    mauris
-                                    sit amet massa. Nulla malesuada pellentesque
-                                    elit eget gravida cum sociis. Egestas
-                                    fringilla
-                                    phasellus faucibus scelerisque eleifend
-                                    donec
-                                    pretium vulputate. Sed blandit libero
-                                    volutpat
-                                    sed cras ornare arcu dui vivamus. Ac odio
-                                    tempor
-                                    orci dapibus. Suspendisse sed nisi lacus sed
-                                    viverra tellus in hac. Semper risus in
-                                    hendrerit
-                                    gravida rutrum. Leo vel orci porta non
-                                    pulvinar.
-                                    Nulla facilisi nullam vehicula ipsum.
-                                    Bibendum
-                                    at varius vel pharetra. Natoque penatibus et
-                                    magnis dis parturient montes. Rhoncus est
-                                    pellentesque elit ullamcorper dignissim
-                                    cras.
-                                    Augue mauris augue neque gravida. Ut diam
-                                    quam
-                                    nulla porttitor massa id. Sollicitudin
-                                    tempor id
-                                    eu nisl nunc. Nibh mauris cursus mattis
-                                    molestie. Sit amet consectetur adipiscing
-                                    elit
-                                    pellentesque habitant.
-
-                                    In metus vulputate eu scelerisque felis
-                                    imperdiet proin fermentum leo. Nunc mattis
-                                    enim
-                                    ut tellus elementum sagittis vitae. Pulvinar
-                                    sapien et ligula ullamcorper malesuada
-                                    proin.
-                                    Vulputate enim nulla aliquet porttitor lacus
-                                    luctus. Sed enim ut sem viverra aliquet eget
-                                    sit
-                                    amet tellus. Pulvinar neque laoreet
-                                    suspendisse
-                                    interdum consectetur libero. Venenatis
-                                    lectus
-                                    magna fringilla urna porttitor rhoncus dolor
-                                    purus non. Ultricies leo integer malesuada
-                                    nunc
-                                    vel. Laoreet id donec ultrices tincidunt
-                                    arcu
-                                    non. Gravida dictum fusce ut placerat orci
-                                    nulla. Ornare quam viverra orci sagittis eu
-                                    volutpat odio facilisis mauris. Sed libero
-                                    enim
-                                    sed faucibus turpis. Pellentesque elit eget
-                                    gravida cum sociis natoque penatibus. At
-                                    auctor
-                                    urna nunc id cursus metus aliquam eleifend
-                                    mi.
-                                    Fringilla phasellus faucibus scelerisque
-                                    eleifend donec pretium vulputate sapien. Sed
-                                    viverra tellus in hac habitasse.
-
-                                    Aliquam ultrices sagittis orci a scelerisque
-                                    purus semper eget. Leo vel fringilla est
-                                    ullamcorper eget nulla. Adipiscing at in
-                                    tellus
-                                    integer feugiat. Tempor id eu nisl nunc mi
-                                    ipsum. Urna et pharetra pharetra massa massa
-                                    ultricies mi quis hendrerit. Et netus et
-                                    malesuada fames. Purus sit amet volutpat
-                                    consequat mauris nunc congue nisi. Phasellus
-                                    faucibus scelerisque eleifend donec pretium
-                                    vulputate sapien. A scelerisque purus semper
-                                    eget duis at tellus at. Massa tempor nec
-                                    feugiat
-                                    nisl pretium. Lectus proin nibh nisl
-                                    condimentum. Purus ut faucibus pulvinar
-                                    elementum integer enim neque. Porttitor leo
-                                    a
-                                    diam sollicitudin tempor id eu nisl.
-                                    Facilisis
-                                    leo vel fringilla est ullamcorper eget. In
-                                    hac
-                                    habitasse platea dictumst quisque.
-
-                                    Aliquam ut porttitor leo a. Turpis massa
-                                    tincidunt dui ut ornare lectus. Et odio
-                                    pellentesque diam volutpat commodo sed
-                                    egestas.
-                                    Elementum nibh tellus molestie nunc. Aenean
-                                    et
-                                    tortor at risus viverra adipiscing. Quis
-                                    commodo
-                                    odio aenean sed. Quam id leo in vitae turpis
-                                    massa. In cursus turpis massa tincidunt dui
-                                    ut
-                                    ornare lectus sit. Faucibus purus in massa
-                                    tempor nec feugiat. Commodo sed egestas
-                                    egestas
-                                    fringilla phasellus faucibus scelerisque
-                                    eleifend donec. Turpis nunc eget lorem dolor
-                                    sed
-                                    viverra ipsum nunc aliquet. Risus sed
-                                    vulputate
-                                    odio ut enim blandit volutpat maecenas.
-                                    Netus et
-                                    malesuada fames ac turpis. Duis ut diam quam
-                                    nulla porttitor massa id neque.
-
-                                    Non sodales neque sodales ut. Eget arcu
-                                    dictum
-                                    varius duis at consectetur lorem. Risus
-                                    viverra
-                                    adipiscing at in tellus integer feugiat
-                                    scelerisque varius. Pretium fusce id velit
-                                    ut
-                                    tortor. Massa vitae tortor condimentum
-                                    lacinia
-                                    quis. Vitae suscipit tellus mauris a diam
-                                    maecenas. Euismod elementum nisi quis
-                                    eleifend
-                                    quam adipiscing. Dictumst vestibulum rhoncus
-                                    est
-                                    pellentesque. Netus et malesuada fames ac.
-                                    Erat
-                                    pellentesque adipiscing commodo elit.
-                                    Facilisis
-                                    leo vel fringilla est. Sollicitudin tempor
-                                    id eu
-                                    nisl nunc mi ipsum faucibus vitae. Ut eu sem
-                                    integer vitae justo eget magna fermentum.
-                                    Cursus turpis massa tincidunt dui ut ornare.
-                                    Viverra adipiscing at in tellus integer
-                                    feugiat
-                                    scelerisque varius. Orci dapibus ultrices in
-                                    iaculis nunc. Consequat semper viverra nam
-                                    libero justo laoreet sit. Eu consequat ac
-                                    felis
-                                    donec et odio pellentesque diam volutpat.
-                                    Morbi
-                                    enim nunc faucibus a pellentesque sit amet
-                                    porttitor. Arcu non sodales neque sodales ut
-                                    etiam sit. Aliquet sagittis id consectetur
-                                    purus
-                                    ut faucibus pulvinar. Pellentesque
-                                    adipiscing
-                                    commodo elit at imperdiet dui accumsan sit.
-                                    Iaculis urna id volutpat lacus laoreet non
-                                    curabitur gravida. Nulla aliquet enim tortor
-                                    at
-                                    auctor. Suspendisse faucibus interdum
-                                    posuere
-                                    lorem ipsum dolor sit amet. At tellus at
-                                    urna
-                                    condimentum. Mauris pellentesque pulvinar
-                                    pellentesque habitant morbi. Lacus laoreet
-                                    non
-                                    curabitur gravida arcu ac tortor. Sit amet
-                                    nulla
-                                    facilisi morbi tempus iaculis.
-
-                                    A condimentum vitae sapien pellentesque
-                                    habitant
-                                    morbi tristique. Dignissim suspendisse in
-                                    est
-                                    ante in nibh mauris cursus. Congue nisi
-                                    vitae
-                                    suscipit tellus. Et magnis dis parturient
-                                    montes
-                                    nascetur ridiculus mus. Egestas maecenas
-                                    pharetra convallis posuere morbi leo urna.
-                                    Enim
-                                    sed faucibus turpis in eu mi bibendum.
-                                    Feugiat
-                                    sed lectus vestibulum mattis ullamcorper.
-                                    Vestibulum lorem sed risus ultricies
-                                    tristique
-                                    nulla. Pretium nibh ipsum consequat nisl. A
-                                    scelerisque purus semper eget duis. Viverra
-                                    nam
-                                    libero justo laoreet. Magna fringilla urna
-                                    porttitor rhoncus dolor purus. Nisi
-                                    scelerisque
-                                    eu ultrices vitae auctor eu augue. Nunc sed
-                                    blandit libero volutpat sed cras. Metus
-                                    vulputate eu scelerisque felis imperdiet
-                                    proin
-                                    fermentum leo. Id consectetur purus ut
-                                    faucibus
-                                    pulvinar elementum integer enim. Lacinia
-                                    quis
-                                    vel eros donec ac.
-
-                                    Justo laoreet sit amet cursus sit amet.
-                                    Aenean
-                                    pharetra magna ac placerat vestibulum lectus
-                                    mauris. Enim ut tellus elementum sagittis
-                                    vitae
-                                    et leo duis. Odio aenean sed adipiscing diam
-                                    donec adipiscing. Dictum fusce ut placerat
-                                    orci.
-                                    Ipsum faucibus vitae aliquet nec ullamcorper
-                                    sit
-                                    amet. Vitae justo eget magna fermentum
-                                    iaculis.
-                                    Bibendum arcu vitae elementum curabitur
-                                    vitae
-                                    nunc sed velit. In fermentum et sollicitudin
-                                    ac
-                                    orci phasellus egestas tellus rutrum. Lorem
-                                    ipsum dolor sit amet consectetur adipiscing
-                                    elit
-                                    pellentesque. At elementum eu facilisis sed
-                                    odio
-                                    morbi quis commodo odio. Convallis posuere
-                                    morbi
-                                    leo urna. In eu mi bibendum neque egestas
-                                    congue
-                                    quisque egestas diam.
-
-                                    Integer malesuada nunc vel risus commodo
-                                    viverra
-                                    maecenas. Tellus molestie nunc non blandit
-                                    massa
-                                    enim. Sit amet volutpat consequat mauris
-                                    nunc
-                                    congue. Ac felis donec et odio pellentesque
-                                    diam
-                                    volutpat commodo. Neque aliquam vestibulum
-                                    morbi
-                                    blandit cursus risus at ultrices. Diam
-                                    sollicitudin tempor id eu nisl. Adipiscing
-                                    diam
-                                    donec adipiscing tristique risus. Massa sed
-                                    elementum tempus egestas sed sed risus. Sit
-                                    amet
-                                    consectetur adipiscing elit pellentesque
-                                    habitant morbi tristique. Vivamus arcu felis
-                                    bibendum ut tristique. Magna sit amet purus
-                                    gravida quis blandit turpis.
-
-                                    Non diam phasellus vestibulum lorem sed
-                                    risus
-                                    ultricies. Sed cras ornare arcu dui vivamus.
-                                    Ac
-                                    felis donec et odio pellentesque diam
-                                    volutpat
-                                    commodo sed. Ornare lectus sit amet est
-                                    placerat
-                                    in egestas erat imperdiet. Nibh venenatis
-                                    cras
-                                    sed felis eget velit aliquet sagittis id.
-                                    Eget
-                                    magna fermentum iaculis eu non diam
-                                    phasellus
-                                    vestibulum lorem. Orci a scelerisque purus
-                                    semper eget duis at tellus. Lorem donec
-                                    massa
-                                    sapien faucibus et molestie ac. Tristique et
-                                    egestas quis ipsum suspendisse ultrices
-                                    gravida
-                                    dictum fusce. Lobortis elementum nibh tellus
-                                    molestie nunc non blandit massa enim. Netus
-                                    et
-                                    malesuada fames ac turpis egestas maecenas
-                                    pharetra. Phasellus faucibus scelerisque
-                                    eleifend donec pretium vulputate sapien nec.
-                                    Faucibus et molestie ac feugiat. Sed risus
-                                    pretium quam vulputate dignissim
-                                    suspendisse.
-                                    Eget est lorem ipsum dolor sit amet
-                                    consectetur
-                                    adipiscing elit. Sollicitudin nibh sit amet
-                                    commodo nulla facilisi nullam vehicula.
-                                    Facilisis volutpat est velit egestas dui id
-                                    ornare. Lacus viverra vitae congue eu
-                                    consequat
-                                    ac felis donec et.
-
                                     Pulvinar elementum integer enim neque
                                     volutpat.
                                     Amet dictum sit amet justo donec enim.
@@ -506,7 +158,14 @@
                                     Vestibulum rhoncus est pellentesque elit
                                     ullamcorper dignissim. Aliquet risus feugiat
                                     in
-                                    ante metus dictum at tempor. Id aliquet
+                                    ante metus dictum at tempor.
+                                </p>
+                                <div class="media__content">
+                                    <img src="assets/info1.svg"/>
+                                </div>
+
+                                <p>
+                                    Id aliquet
                                     risus
                                     feugiat in ante metus. Quam lacus
                                     suspendisse
@@ -518,222 +177,9 @@
                                     nibh
                                     tortor id. Volutpat commodo sed egestas
                                     egestas
-                                    fringilla phasellus faucibus scelerisque
-                                    eleifend. Viverra mauris in aliquam sem
-                                    fringilla ut morbi tincidunt. Sollicitudin
-                                    ac
-                                    orci phasellus egestas tellus rutrum tellus.
-                                    Nunc scelerisque viverra mauris in aliquam
-                                    sem
-                                    fringilla ut. Pulvinar proin gravida
-                                    hendrerit
-                                    lectus a. Eu volutpat odio facilisis mauris
-                                    sit
-                                    amet massa vitae tortor. Non sodales neque
-                                    sodales ut etiam sit amet nisl. Adipiscing
-                                    elit
-                                    pellentesque habitant morbi tristique
-                                    senectus
-                                    et netus et. Quis risus sed vulputate odio
-                                    ut
-                                    enim blandit volutpat maecenas. Feugiat
-                                    vivamus
-                                    at augue eget arcu dictum varius duis.
-                                    Lectus
-                                    quam id leo in vitae turpis massa sed. At
-                                    erat
-                                    pellentesque adipiscing commodo elit. In
-                                    pellentesque massa placerat duis. Fermentum
-                                    iaculis eu non diam phasellus vestibulum
-                                    lorem
-                                    sed.
-
-                                    <h4 id="hello-section">Hello</h4>
-                                    In massa tempor nec feugiat. Integer enim
-                                    neque
-                                    volutpat ac tincidunt vitae semper quis.
-                                    Auctor
-                                    augue mauris augue neque gravida. Convallis
-                                    posuere morbi leo urna molestie at
-                                    elementum.
-                                    Amet nisl purus in mollis nunc sed. At
-                                    auctor
-                                    urna nunc id. Facilisis gravida neque
-                                    convallis
-                                    a. Donec ac odio tempor orci dapibus
-                                    ultrices in
-                                    iaculis nunc. Ultricies mi quis hendrerit
-                                    dolor
-                                    magna eget est lorem. Ut tristique et
-                                    egestas
-                                    quis ipsum suspendisse ultrices gravida
-                                    dictum.
-                                    Vivamus arcu felis bibendum ut tristique et
-                                    egestas quis ipsum. In aliquam sem fringilla
-                                    ut
-                                    morbi tincidunt augue interdum velit. Vel
-                                    turpis
-                                    nunc eget lorem. Mauris pharetra et ultrices
-                                    neque ornare aenean euismod elementum.
-                                    Sagittis
-                                    aliquam malesuada bibendum arcu vitae.
-                                    Tincidunt augue interdum velit euismod in
-                                    pellentesque. At in tellus integer feugiat.
-                                    Cursus euismod quis viverra nibh cras
-                                    pulvinar.
-                                    Nunc vel risus commodo viverra maecenas
-                                    accumsan. Etiam tempor orci eu lobortis
-                                    elementum. Quis risus sed vulputate odio ut
-                                    enim. Neque ornare aenean euismod elementum
-                                    nisi
-                                    quis eleifend. Vestibulum sed arcu non odio.
-                                    Sem
-                                    fringilla ut morbi tincidunt. Velit egestas
-                                    dui
-                                    id ornare arcu. Leo urna molestie at
-                                    elementum
-                                    eu facilisis sed odio. Nibh nisl condimentum
-                                    id
-                                    venenatis a.
-
-                                    In metus vulputate eu scelerisque felis. At
-                                    tellus at urna condimentum mattis
-                                    pellentesque
-                                    id. Aliquet eget sit amet tellus cras
-                                    adipiscing
-                                    enim. Ante in nibh mauris cursus mattis. Non
-                                    diam phasellus vestibulum lorem sed risus
-                                    ultricies. Sit amet mattis vulputate enim
-                                    nulla
-                                    aliquet porttitor lacus. Leo in vitae turpis
-                                    massa sed elementum tempus egestas. Purus
-                                    faucibus ornare suspendisse sed nisi lacus.
-                                    Tristique nulla aliquet enim tortor at. Nunc
-                                    non
-                                    blandit massa enim nec dui nunc mattis. Quis
-                                    varius quam quisque id diam vel quam
-                                    elementum
-                                    pulvinar. Mattis rhoncus urna neque viverra.
-                                    Tellus cras adipiscing enim eu. Libero nunc
-                                    consequat interdum varius sit amet mattis.
-                                    Lacus
-                                    sed viverra tellus in hac habitasse. Sed
-                                    elementum tempus egestas sed sed risus
-                                    pretium
-                                    quam. Id cursus metus aliquam eleifend mi in
-                                    nulla. Id aliquet risus feugiat in.
-
-                                    Dictum sit amet justo donec enim diam.
-                                    Volutpat
-                                    lacus laoreet non curabitur gravida arcu ac
-                                    tortor dignissim. Ante in nibh mauris cursus
-                                    mattis molestie. Facilisis magna etiam
-                                    tempor
-                                    orci. Nullam vehicula ipsum a arcu cursus
-                                    vitae.
-                                    Sapien pellentesque habitant morbi tristique
-                                    senectus et. Adipiscing at in tellus integer
-                                    feugiat. Sit amet venenatis urna cursus.
-                                    Neque
-                                    sodales ut etiam sit amet nisl purus in
-                                    mollis.
-                                    Sit amet volutpat consequat mauris nunc
-                                    congue
-                                    nisi.
-
-                                    Facilisis gravida neque convallis a cras. Mi
-                                    ipsum faucibus vitae aliquet nec ullamcorper
-                                    sit
-                                    amet risus. Lorem ipsum dolor sit amet
-                                    consectetur adipiscing elit duis tristique.
-                                    Nibh
-                                    tortor id aliquet lectus proin nibh nisl
-                                    condimentum. Posuere morbi leo urna molestie
-                                    at.
-                                    Nulla aliquet enim tortor at auctor urna
-                                    nunc.
-                                    Nam at lectus urna duis convallis convallis.
-                                    Urna molestie at elementum eu facilisis. Sed
-                                    velit dignissim sodales ut eu. Enim sit amet
-                                    venenatis urna. Dolor sit amet consectetur
-                                    adipiscing elit ut aliquam. Aliquet
-                                    porttitor
-                                    lacus luctus accumsan tortor posuere. Velit
-                                    laoreet id donec ultrices. Pharetra pharetra
-                                    massa massa ultricies mi quis. Velit laoreet
-                                    id
-                                    donec ultrices tincidunt arcu. Vestibulum
-                                    lectus
-                                    mauris ultrices eros in. Consectetur lorem
-                                    donec
-                                    massa sapien faucibus. Tortor aliquam nulla
-                                    facilisi cras fermentum odio eu. Mattis
-                                    ullamcorper velit sed ullamcorper morbi
-                                    tincidunt ornare massa eget.
-
-                                    Amet nulla facilisi morbi tempus iaculis. At
-                                    tellus at urna condimentum mattis
-                                    pellentesque
-                                    id nibh tortor. In hac habitasse platea
-                                    dictumst
-                                    vestibulum rhoncus. A lacus vestibulum sed
-                                    arcu
-                                    non. Gravida dictum fusce ut placerat orci.
-                                    Integer quis auctor elit sed. Commodo elit
-                                    at
-                                    imperdiet dui accumsan sit. Viverra nam
-                                    libero
-                                    justo laoreet sit amet cursus sit. Sit amet
-                                    consectetur adipiscing elit. Ipsum consequat
-                                    nisl vel pretium lectus. Nisi porta lorem
-                                    mollis
-                                    aliquam ut.
-
-                                    Fermentum leo vel orci porta non pulvinar.
-                                    Maecenas sed enim ut sem viverra. Id aliquet
-                                    lectus proin nibh nisl. Tincidunt lobortis
-                                    feugiat vivamus at augue eget arcu dictum
-                                    varius. Id diam vel quam elementum pulvinar
-                                    etiam non quam lacus. Maecenas ultricies mi
-                                    eget
-                                    mauris pharetra et. Volutpat commodo sed
-                                    egestas
-                                    egestas fringilla phasellus. Integer feugiat
-                                    scelerisque varius morbi enim nunc faucibus
-                                    a.
-                                    Consequat semper viverra nam libero justo
-                                    laoreet sit amet. Libero justo laoreet sit
-                                    amet
-                                    cursus sit amet. Mattis ullamcorper velit
-                                    sed
-                                    ullamcorper morbi tincidunt ornare massa. Id
-                                    velit ut tortor pretium viverra suspendisse
-                                    potenti nullam. Tristique magna sit amet
-                                    purus
-                                    gravida quis blandit.
-
-                                    Condimentum vitae sapien pellentesque
-                                    habitant.
-                                    Posuere sollicitudin aliquam ultrices
-                                    sagittis
-                                    orci. Duis tristique sollicitudin nibh sit
-                                    amet
-                                    commodo nulla. Enim tortor at auctor urna
-                                    nunc
-                                    id cursus. Ac turpis egestas integer eget
-                                    aliquet nibh praesent. Fames ac turpis
-                                    egestas
-                                    sed tempus urna. Facilisis sed odio morbi
-                                    quis
-                                    commodo odio aenean sed. Dignissim diam quis
-                                    enim lobortis scelerisque fermentum dui
-                                    faucibus
-                                    in. Faucibus et molestie ac feugiat sed.
-                                    Donec
-                                    ultrices tincidunt arcu non sodales neque
-                                    sodales ut etiam. Maecenas volutpat blandit
-                                    aliquam etiam erat velit scelerisque. Lacus
-                                    suspendisse faucibus interdum posuere lorem.
+                                </p>
+                                <h4 id="hello-section">Hello</h4>
+                                <p>
                                     Aliquet nibh praesent tristique magna sit
                                     amet
                                     purus gravida quis. Aliquam malesuada
@@ -742,7 +188,30 @@
                                     Vitae
                                     et leo duis ut diam. Sit amet dictum sit
                                     amet
-                                    justo donec.
+                                    justo donec.Amet purus gravida quis blandit
+                                    turpis cursus. Platea dictumst quisque
+                                    sagittis purus sit amet volutpat consequat
+                                    mauris. Quis varius quam quisque id diam vel
+                                    quam elementum. Sagittis orci a scelerisque
+                                    purus. Lectus proin nibh nisl condimentum id
+                                    venenatis a. Vestibulum rhoncus est
+                                    pellentesque elit ullamcorper dignissim
+                                    cras. Varius vel pharetra vel turpis nunc
+                                    eget lorem. Tortor id aliquet lectus proin
+                                    nibh nisl condimentum id venenatis. Sem
+                                    viverra aliquet eget sit amet. Lectus mauris
+                                    ultrices eros in cursus. Massa id neque
+                                    aliquam vestibulum morbi blandit cursus.
+                                    Fermentum iaculis eu non diam phasellus
+                                    vestibulum lorem. In nulla posuere
+                                    sollicitudin aliquam ultrices sagittis.
+                                    Tincidunt tortor aliquam nulla facilisi
+                                    cras. Morbi blandit cursus risus at ultrices
+                                    mi tempus imperdiet nulla. Semper auctor
+                                    neque vitae tempus. Aliquet enim tortor at
+                                    auctor urna nunc id. Egestas egestas
+                                    fringilla phasellus faucibus scelerisque
+                                    eleifend donec pretium.
 
                                     Lobortis feugiat vivamus at augue eget arcu
                                     dictum varius duis. In arcu cursus euismod
@@ -765,6 +234,78 @@
                                     risus feugiat. Nibh ipsum consequat nisl
                                     vel.
                                 </p>
+                                <div class="codeblock">
+                                    <button onclick="copyCode(this)">Copy</button>
+                                    <pre><code class="language-css">.test_class p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: white;
+}
+</code></pre>
+                                </div>
+                                <div class="media__content">
+                                    <img src="assets/info2.svg"/>
+                                </div>
+                                <h4 id="bye-section">Bye</h4>
+                                <p>
+                                    Aliquet nibh praesent tristique magna sit
+                                    amet
+                                    purus gravida quis. Aliquam malesuada
+                                    bibendum
+                                    arcu vitae elementum curabitur vitae nunc.
+                                    Vitae
+                                    et leo duis ut diam. Sit amet dictum sit
+                                    amet
+                                    justo donec.Amet purus gravida quis blandit
+                                    turpis cursus. Platea dictumst quisque
+                                    sagittis purus sit amet volutpat consequat
+                                    mauris. Quis varius quam quisque id diam vel
+                                    quam elementum. Sagittis orci a scelerisque
+                                    purus. Lectus proin nibh nisl condimentum id
+                                    venenatis a. Vestibulum rhoncus est
+                                    pellentesque elit ullamcorper dignissim
+                                    cras. Varius vel pharetra vel turpis nunc
+                                    eget lorem. Tortor id aliquet lectus proin
+                                    nibh nisl condimentum id venenatis. Sem
+                                    viverra aliquet eget sit amet. Lectus mauris
+                                    ultrices eros in cursus. Massa id neque
+                                    aliquam vestibulum morbi blandit cursus.
+                                    Fermentum iaculis eu non diam phasellus
+                                    vestibulum lorem. In nulla posuere
+                                    sollicitudin aliquam ultrices sagittis.
+                                    Tincidunt tortor aliquam nulla facilisi
+                                    cras. Morbi blandit cursus risus at ultrices
+                                    mi tempus imperdiet nulla. Semper auctor
+                                    neque vitae tempus. Aliquet enim tortor at
+                                    auctor urna nunc id. Egestas egestas
+                                    fringilla phasellus faucibus scelerisque
+                                    eleifend donec pretium.
+
+                                    Lobortis feugiat vivamus at augue eget arcu
+                                    dictum varius duis. In arcu cursus euismod
+                                    quis
+                                    viverra nibh cras pulvinar. Mi quis
+                                    hendrerit
+                                    dolor magna eget est lorem ipsum. Amet
+                                    venenatis
+                                    urna cursus eget. Sed lectus vestibulum
+                                    mattis
+                                    ullamcorper velit. Viverra aliquet eget sit
+                                    amet
+                                    tellus cras adipiscing enim eu. Tortor
+                                    condimentum lacinia quis vel eros donec ac
+                                    odio.
+                                    Vivamus at augue eget arcu dictum varius
+                                    duis.
+                                    Ultricies lacus sed turpis tincidunt id
+                                    aliquet
+                                    risus feugiat. Nibh ipsum consequat nisl
+                                    vel.
+                                </p>
+                                <div class="media__content">
+                                    <img src="assets/19609.jpg"/>
+                                </div>
                             </div>
                         </div>
 
@@ -775,9 +316,6 @@
         </div>
 
         <script src="scripts/script.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js">
-        </script>
-        <script>hljs.highlightAll();</script>
+        <script src="scripts/prism.js"></script>
     </body>
 </html>
