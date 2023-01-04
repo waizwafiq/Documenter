@@ -225,7 +225,7 @@ li.toc__listitem > ul > li a {
     grid-column-start: 2;
     grid-row-start: 2;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
     width: 100%;
 
     margin-top: 10px;
@@ -235,9 +235,16 @@ li.toc__listitem > ul > li a {
 .navigator {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #808080;
 }
 
+.navigator h1 {}
+
 .navigator .previous {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    border-right: 1px solid #808080;
+    padding: 10px;
 }
 
 .navigator .previous:hover {
@@ -246,6 +253,9 @@ li.toc__listitem > ul > li a {
 }
 
 .navigator .next {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    padding: 10px;
 }
 
 .navigator .next:hover {
