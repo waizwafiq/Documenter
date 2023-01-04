@@ -33,5 +33,5 @@ function copyCode(button) {
 
     setTimeout(function() {
         button.textContent = 'Copy';
-      }, 3000);
+      }, 1800);
 }
