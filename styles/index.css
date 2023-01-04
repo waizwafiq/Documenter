@@ -234,7 +234,7 @@ li.toc__listitem > ul > li a {
 
 .navigator {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .navigator .previous {
