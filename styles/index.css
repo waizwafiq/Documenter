@@ -1,3 +1,7 @@
+:root {
+
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -238,7 +242,20 @@ li.toc__listitem > ul > li a {
     border-bottom: 1px solid #808080;
 }
 
-.navigator h1 {}
+.navigator h1 {
+    font-weight: 300;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pagination span {
+    font-size: 1rem;
+    color: #808080;
+}
 
 .navigator .previous {
     display: grid;
