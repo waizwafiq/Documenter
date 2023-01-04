@@ -130,7 +130,7 @@ div.guide__header {
 
 ul > li.toc__listitem {
     /* TOP LEVEL LIST */
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 li.toc__listitem > ul > li {
