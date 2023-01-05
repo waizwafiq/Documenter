@@ -181,7 +181,22 @@ li.toc__listitem > ul > li a {
     line-height: 1.5;
 }
 
-.note__body > p {
+.note__body > h1 {
+    
+}
+
+.note__body > div h2 {
+    margin-top: 60px;
+}
+
+.note__body > div h3 {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.note__body > div p {
+    line-height: 1.7;
+    text-align: justify;
 }
 
 .media__content {
@@ -200,7 +215,7 @@ li.toc__listitem > ul > li a {
     margin: auto;
 }
 
-.note__body pre {
+.note__body > div pre {
     border: #A6A3A3 solid 1px;
 }
 

@@ -50,7 +50,7 @@ function currentTopic() {
     
     for (const topic of topics) {
 
-        //get the div of the section
+        //get the div of the section (to measure height)
         const topicSectDiv = topic.parentElement
 
         // get the top position of the topic/subtopic
