@@ -136,6 +136,7 @@ div.guide__header {
 ul > li.toc__listitem {
     /* TOP LEVEL LIST */
     padding-bottom: 20px;
+    font-weight: bold;
 }
 
 li.toc__listitem > ul > li {
@@ -146,7 +147,12 @@ li.toc__listitem > ul > li {
 }
 
 li.toc__listitem > ul > li a {
+    font-weight: normal;
     font-size: 1rem;
+}
+
+.toc__listitem.active > a {
+    color: #6ad5e8;
 }
 
 .sticky {
@@ -173,6 +179,9 @@ li.toc__listitem > ul > li a {
 .note__content {
     /* font-family: Arial, Helvetica, sans-serif; */
     line-height: 1.5;
+}
+
+.note__body > p {
 }
 
 .media__content {
