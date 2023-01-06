@@ -214,6 +214,7 @@ li.toc__listitem > ul > li a {
 .media__content img {
     /* to avoid image with large dimensions overflowing */
     width: 75%;
+    pointer-events: none;
 }
 
 .note__body {
