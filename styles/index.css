@@ -1,6 +1,4 @@
-:root {
-
-}
+:root {}
 
 html {
     scroll-behavior: smooth;
@@ -123,36 +121,36 @@ div.guide__header {
     padding: 10px 0 0 0;
 }
 
-.toc__listitem > a {
+.toc__listitem>a {
     text-decoration: none;
     font-size: 1.2rem;
     color: #d2d3d7;
 }
 
-.toc__listitem > a:hover {
+.toc__listitem>a:hover {
     text-decoration: underline;
     background-color: rgba(78, 78, 80, 0.6);
 }
 
-ul > li.toc__listitem {
+ul>li.toc__listitem {
     /* TOP LEVEL LIST */
     padding-bottom: 20px;
     font-weight: bold;
 }
 
-li.toc__listitem > ul > li {
+li.toc__listitem>ul>li {
     /* BOTTOM LEVEL LIST */
     /* margin: 10px 0; */
     padding: 15px 20px;
     border-left: 1px solid #808080;
 }
 
-li.toc__listitem > ul > li a {
+li.toc__listitem>ul>li a {
     font-weight: normal;
     font-size: 1rem;
 }
 
-.toc__listitem.active > a {
+.toc__listitem.active>a {
     color: #6ad5e8;
 }
 
@@ -187,20 +185,18 @@ li.toc__listitem > ul > li a {
     line-height: 1.5;
 }
 
-.note__body > h1 {
-    
-}
+.note__body>h1 {}
 
-.note__body > div h2 {
+.note__body>div h2 {
     margin-top: 60px;
 }
 
-.note__body > div h3 {
+.note__body>div h3 {
     margin-top: 40px;
     margin-bottom: 0;
 }
 
-.note__body > div p {
+.note__body>div p {
     line-height: 1.7;
     text-align: justify;
 }
@@ -222,7 +218,7 @@ li.toc__listitem > ul > li a {
     margin: auto;
 }
 
-.note__body > div pre {
+.note__body>div pre {
     border: #A6A3A3 solid 1px;
 }
 
@@ -314,6 +310,7 @@ li.toc__listitem > ul > li a {
 .credits {
     vertical-align: bottom;
 }
+
 /* RESPONSIVE DESIGN */
 
 .mobile-guide__header {
@@ -397,4 +394,30 @@ li.toc__listitem > ul > li a {
     -ms-user-select: none;
     /* Standard syntax */
     user-select: none;
+}
+
+/* DISABLE PRINTING */
+.print-view {
+    display: none;
+}
+
+@media print {
+
+    .guide__sidebar,
+    .guide {
+        /* hide whole page */
+        display: none;
+    }
+
+    .print-view {
+        display: block;
+        font-size: 8rem;
+        height: 100%;
+        width: 100%;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .print-view p {
+        font-size: 5rem;
+    }
 }
