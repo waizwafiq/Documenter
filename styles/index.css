@@ -95,6 +95,7 @@ div.guide__header {
 
 /* GUIDE BODY */
 .guide__body {
+    position: relative;
     grid-column-start: 2;
 }
 
@@ -158,6 +159,11 @@ li.toc__listitem > ul > li a {
 .sticky {
     position: fixed;
     top: 0;
+}
+
+.to-bottom {
+    position: absolute;
+    bottom: 0px;
 }
 
 .note {
@@ -253,7 +259,7 @@ li.toc__listitem > ul > li a {
     grid-column-start: 2;
     grid-row-start: 2;
     display: grid;
-    grid-template-rows: 1fr 0.5fr;
+    grid-template-rows: 300px 450px;
     width: 100%;
 
     margin-top: 10px;
@@ -304,6 +310,9 @@ li.toc__listitem > ul > li a {
     cursor: pointer;
 }
 
+.credits {
+    vertical-align: bottom;
+}
 /* RESPONSIVE DESIGN */
 
 .mobile-guide__header {
