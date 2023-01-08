@@ -1,3 +1,32 @@
+
+// Check if the copyright button has been altered
+
+function checkCopyright() {
+    const flag1 = document.querySelector(".credits") == null || document.querySelector('.credits p a') == null
+    const flag2 = document.querySelector('.credits p a').innerHTML != 'Waiz Wafiq' || document.querySelector('div.footer') == null;
+    // console.log(document.querySelector('.a'))
+    console.log(flag1, flag2)
+    if (flag1 || flag2) {
+        // If the notice is not present, create a new element
+        const notice = document.createElement("p");
+        notice.style.textAlign = 'center'
+        notice.classList.add("credits");
+        notice.innerHTML = "Developed by Waiz Wafiq";
+
+        // Insert the notice into the footer
+        const footer = document.querySelector(".footer");
+        footer.appendChild(notice);
+        window.location.assign('https://www.google.com')
+    }
+
+    // const creds = document.querySelector('.credits p a')
+    // console.log(creds.innerHTML)
+}
+
+window.addEventListener("load", function () {
+    checkCopyright();
+});
+
 // MAKE RIGHT SIDEBAR STICKS AFTER SCROLLING
 window.onscroll = function () { stickSidebar() };
 
@@ -14,18 +43,18 @@ function stickSidebar() {
     }
 
     let to_bottom_flag = window.pageYOffset + sidebar.offsetHeight >= footer.offsetTop;
-    
+
     if (to_bottom_flag) {
         sidebar.classList.remove("sticky")
         sidebar.classList.add("to-bottom");
     }
-    
+
     // console.log(sidebar.classList.contains('to-bottom'), window.pageYOffset < footer.offsetTop-sidebar_h, to_bottom_flag)
     // console.log(sidebar.offsetHeight, window.pageYOffset, footer.offsetTop, sidebar_h)
     // console.log("-----------------------")
 
 
-    if(sidebar.classList.contains('to-bottom') && window.pageYOffset < footer.offsetTop-sidebar_h) {
+    if (sidebar.classList.contains('to-bottom') && window.pageYOffset < footer.offsetTop - sidebar_h) {
         sidebar.classList.add("sticky")
         sidebar.classList.remove("to-bottom");
     }
@@ -86,3 +115,4 @@ function currentTopic() {
     }
 }
 window.addEventListener("scroll", currentTopic);
+
