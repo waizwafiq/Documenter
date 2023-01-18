@@ -50,7 +50,7 @@ function createRightSidebar() {
         topic_a.innerHTML = topic.innerHTML
         // Append topic_a into topic_li
         topic_li.appendChild(topic_a)
-        
+
         if (subtopics.length > 0) {
             // IF THE TOPICS CONTAIN SUBTOPICS
 
@@ -71,7 +71,7 @@ function createRightSidebar() {
                 subtopic_a.innerHTML = subtopics[i].innerHTML
                 // Append subtopic_a into subtopic_li
                 subtopic_li.appendChild(subtopic_a)
-                
+
                 // Append subtopic_li into subtopic_ul
                 subtopic_ul.appendChild(subtopic_li)
             }
@@ -173,3 +173,28 @@ function currentTopic() {
     }
 }
 window.addEventListener("scroll", currentTopic);
+
+
+// Prevent printing
+
+let timeoutId;
+let ctrlKeyPressed = false;
+document.addEventListener("keydown", function (event) {
+    if (event.ctrlKey || event.metaKey) {
+        ctrlKeyPressed = true;
+        timeoutId = setTimeout(function () {
+            ctrlKeyPressed = false;
+        }, 2000); // 2000 milliseconds = 2 seconds
+    }
+    if (event.key === "s" && ctrlKeyPressed || ctrlKeyPressed && event.shiftKey) {
+        // if the user tries to screenshoot
+        clearTimeout(timeoutId);
+        ctrlKeyPressed = false;
+        event.preventDefault();
+    }
+});
+
+// Disable right-click
+document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+});
