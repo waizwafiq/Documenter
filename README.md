@@ -1,4 +1,6 @@
-# DOCUMENTER Webpage
+# DOCUMENTER
 <hr>
 
-<!-- $$P \left( A=2 \, \middle| \, \dfrac{A^2}{B}>4 \right)$$ -->
+Documenter is a webpage that enables documentation with codeblocks and interactive webpages for learning purposes.
+
+![header](assets/Documenter.png)
