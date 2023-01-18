@@ -1,0 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow: overlay;
+    background-color: #232323;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
