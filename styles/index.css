@@ -99,9 +99,42 @@ div.guide__header {
 
 .guide__top {
     height: 100px;
+    display: grid;
+    /* 20vw to match with .note__sidebar's width */
+    grid-template-columns: 1fr 20vw;
+}
+
+.info {
     display: flex;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding-left: 1%;
+}
+
+.info > p {
+    color: #A6A3A3;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+}
+
+.account {
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.account > img {
+    width: 50px;
+    border-radius: 100%;
+    border: 2.5px solid;
+    border-color: gray;
+
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.account > img:hover {
+    transform: scale(1.2) rotate(4deg);
 }
 
 /* NOTE SIDEBAR */
