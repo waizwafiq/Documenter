@@ -1,0 +1,102 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow: overlay;
+    background-color: #232323;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 35%;
+    /* height: 75%; */
+    background-color: #232323;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+
+    display: grid;
+    grid-template-rows: min-content 1fr 6rem;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+    /*crops the img given the desired height*/
+    object-fit: cover;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.login-form input[type='text'],
+input[type='password'] {
+    background-color: transparent;
+    color: white;
+
+    width: 70%;
+    height: 2.5rem;
+    margin: 16px 0;
+    padding-left: 8px;
+
+    font-size: 1rem;
+
+    border: white 1px solid;
+    border-radius: 8px;
+}
+
+.login-form button[type='submit'] {
+    background-color: rgba(13, 153, 255, 1);
+    color: white;
+    width: 9rem;
+    height: 2.6rem;
+    margin-top: 16px;
+
+    font-size: 1.2rem;
+
+    border-radius: 16px;
+
+    cursor: pointer;
+}
+
+.login-form button[type='submit']:hover {
+    background-color: rgba(13, 153, 255, 0.6);
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.options > p > a {
+    color: rgba(13, 153, 255, 1);
+    text-decoration: none;
+}
+
+.options > p > a:hover {
+    color: rgba(13, 153, 255, 0.6);
+}
+
+/* EXTRA CONFIGS */
+.prevent-select {
+    /* PREVENT TEXT SELECTION (highlight) */
+
+    /* Safari */
+    -webkit-user-select: none;
+    /* IE 10 and IE 11 */
+    -ms-user-select: none;
+    /* Standard syntax */
+    user-select: none;
+}
