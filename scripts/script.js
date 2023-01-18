@@ -1,11 +1,10 @@
-
-// Check if the copyright button has been altered
+// Check if the copyright button/section has been altered
 
 function checkCopyright() {
     const flag1 = document.querySelector(".credits") == null || document.querySelector('.credits p a') == null
     const flag2 = document.querySelector('.credits p a').innerHTML != 'Waiz Wafiq' || document.querySelector('div.footer') == null;
     // console.log(document.querySelector('.a'))
-    console.log(flag1, flag2)
+    // console.log(flag1, flag2)
     if (flag1 || flag2) {
         // If the notice is not present, create a new element
         const notice = document.createElement("p");
@@ -26,6 +25,65 @@ function checkCopyright() {
 window.addEventListener("load", function () {
     checkCopyright();
 });
+
+// CREATE RIGHT SIDEBAR BASED ON THE HEADINGS IN THE NOTE__BODY
+createRightSidebar()
+function createRightSidebar() {
+    let topics = document.querySelectorAll('.note__body h2')
+    let topics_ul = document.querySelector('.note__sidebar ul')
+
+    for (let topic of topics) {
+        //FOR EACH TOPIC
+        //Get the id of the topic
+        let topic_id = topic.getAttribute('id')
+
+        // Get all subtopics under the id 
+        let subtopics = document.querySelectorAll(`[id^="${topic_id}_"]`)
+
+        // Create a list object for the topic 
+        let topic_li = document.createElement('li')
+        topic_li.classList.add('toc__listitem')
+
+        // Create an anchor object for the topic
+        let topic_a = document.createElement('a')
+        topic_a.href = `#${topic_id}`
+        topic_a.innerHTML = topic.innerHTML
+        // Append topic_a into topic_li
+        topic_li.appendChild(topic_a)
+        
+        if (subtopics.length > 0) {
+            // IF THE TOPICS CONTAIN SUBTOPICS
+
+            // Create the subtopic ul first
+            let subtopic_ul = document.createElement('ul')
+            subtopic_ul.classList.add('toc__list')
+
+            for (let i = 0; i < subtopics.length; i++) {
+                // FOR EACH SUBTOPIC
+
+                // Create the subtopic li
+                let subtopic_li = document.createElement('li')
+                subtopic_li.classList.add('toc__listitem')
+
+                // Create the subtopic anchor object
+                let subtopic_a = document.createElement('a')
+                subtopic_a.href = `#${topic_id}_${i + 1}`
+                subtopic_a.innerHTML = subtopics[i].innerHTML
+                // Append subtopic_a into subtopic_li
+                subtopic_li.appendChild(subtopic_a)
+                
+                // Append subtopic_li into subtopic_ul
+                subtopic_ul.appendChild(subtopic_li)
+            }
+
+            // After going through all subtopics, append the subtopic_ul into topic_li
+            topic_li.appendChild(subtopic_ul)
+        }
+
+        // Append the topic_li to topics_ul
+        topics_ul.appendChild(topic_li)
+    }
+}
 
 // MAKE RIGHT SIDEBAR STICKS AFTER SCROLLING
 window.onscroll = function () { stickSidebar() };
@@ -115,4 +173,3 @@ function currentTopic() {
     }
 }
 window.addEventListener("scroll", currentTopic);
-
