@@ -111,9 +111,9 @@ div.guide__header {
     padding-left: 1%;
 }
 
-.info > p {
+.info>p {
     color: #A6A3A3;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 0.9rem;
 }
 
@@ -123,7 +123,7 @@ div.guide__header {
     justify-content: center;
 }
 
-.account > img {
+.account>img {
     width: 50px;
     border-radius: 100%;
     border: 2.5px solid;
@@ -133,8 +133,23 @@ div.guide__header {
     transition: transform .2s;
 }
 
-.account > img:hover {
+.account>img:hover {
     transform: scale(1.05);
+}
+
+.account>p {
+    background: #0D99FF;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 100px;
+
+    cursor: pointer;
+}
+
+.account>p:hover {
+    background: #1e5283;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /* NOTE SIDEBAR */
@@ -184,7 +199,7 @@ li.toc__listitem>ul>li a {
 }
 
 .toc__listitem.active>a {
-    color: #6ad5e8;
+    color: #0D99FF;
 }
 
 .sticky {
@@ -389,6 +404,10 @@ li.toc__listitem>ul>li a {
         right: 1rem;
         top: 1rem;
         font-size: 100%;
+    }
+
+    .account {
+        display: none;
     }
 }
 
