@@ -134,7 +134,7 @@ div.guide__header {
 }
 
 .account > img:hover {
-    transform: scale(1.2) rotate(4deg);
+    transform: scale(1.05);
 }
 
 /* NOTE SIDEBAR */
@@ -451,6 +451,7 @@ li.toc__listitem>ul>li a {
     }
 
     .print-view p {
+        color: black;
         font-size: 5rem;
     }
 }
