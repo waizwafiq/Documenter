@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles/admin.css">
+		<title>Admin</title>
+	</head>
+	<body>
+		<div class="left__sidebar prevent-select">
+			<!-- Sidebar for pages -->
+			<div class="sidebar__header">
+				<img src="assets/sample_header.png"/>
+			</div>
+			<div class="mobile-sidebar__header">
+				<a href="javascript:void(0)" class="mobile-toggle"
+					onclick="closeTab()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+			<div class="sidebar__text">
+				<p>Administration</p>
+			</div>
+			<div class="pages">
+				<div class="rectangle-page" onclick="location.href='admin1.html'"><p
+						class="index">>>></p>
+					<h3>Dashboard</h3></div>
+				<div class="rectangle-page active"><p class="index">>>></p>
+					<h3>myCMS</h3></div>
+				<div class="rectangle-page"><p
+						class="index">>>></p>
+					<h3>Access Control</h3></div>
+			</div>
+		</div>
+		<div class="workspace">
+			<div class="workspace__body">
+				<div class="mobile__header" style="display: none;">
+
+				</div>
+				<div class="workspace__top prevent-select">
+					<div class="info">
+						<p>(v1.0) Last Updated: 18/1/2023 10:13PM</p>
+					</div>
+					<div class="account">
+						<!-- <p onclick="location.href='login.html'">Log
+							In</p> -->
+						<img src="assets/account-logo2.png"/>
+					</div>
+				</div>
+
+				<main id="main">
+					<div class="main__content">
+						<div class="main__body prevent-select">
+							<h1>Add Content</h1>
+							<input class='title' type="text" name="title" placeholder="Insert Title
+								Here" required/>
+							<textarea placeholder="Insert markdown here" required></textarea>
+
+							<button type="submit">Save</button>
+							<button type="submit">Publish</button>
+						</div>
+					</div>
+				</main>
+			</div>
+			<div class="footer prevent-select">
+				<div class="credits">
+					<p style="text-align: center;">Developed by <a>Waiz Wafiq</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<div class="print-view">NO PRINTING ALLOWED!<p>Copyright belongs to
+			CodeKelas.com</p></div>
+</html>
