@@ -122,19 +122,22 @@ function stickSidebar() {
 function copyCode(button) {
     // Get the code element
     var codeblock = button.closest('.codeblock button').nextElementSibling;
+    
+    // console.log(codeblock.textContent)
+    // // Select the text
+    // let selection = window.getSelection();
+    // let range = document.createRange();
+    // range.selectNodeContents(codeblock);
+    // selection.removeAllRanges();
+    // selection.addRange(range);
 
-    // Select the text
-    let selection = window.getSelection();
-    let range = document.createRange();
-    range.selectNodeContents(codeblock);
-    selection.removeAllRanges();
-    selection.addRange(range);
+    // // Copy the text
+    // document.execCommand('copy');
 
-    // Copy the text
-    document.execCommand('copy');
+    // // Deselect the text
+    // selection.removeAllRanges();
 
-    // Deselect the text
-    selection.removeAllRanges();
+    navigator.clipboard.writeText(codeblock.textContent);
 
     button.textContent = 'Copied!'
 
@@ -195,6 +198,6 @@ document.addEventListener("keydown", function (event) {
 });
 
 // Disable right-click
-document.addEventListener("contextmenu", function(event) {
-    event.preventDefault();
-});
+// document.addEventListener("contextmenu", function(event) {
+//     event.preventDefault();
+// });
