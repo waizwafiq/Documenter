@@ -212,8 +212,32 @@ div.sidebar__header {
     margin: auto;
 }
 
-.main__body>div pre {
-    border: #A6A3A3 solid 1px;
+.main__body .card {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+    /* background-color: red; */
+}
+
+.main__body .card:not(:first-child) {
+    margin: 10px 0;
+}
+
+.card > p {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.card > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card td, th{
+    text-align: center;
+    border: 2px solid white;
 }
 
 /* FOOTER */
